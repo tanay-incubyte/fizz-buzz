@@ -1,9 +1,11 @@
 def fizz_buzz(number)
-	if number % 3 == 0 && number % 5 == 0
+	fizz = (number % 3 == 0)
+	buzz = (number % 5 == 0)
+	if fizz && buzz
 		'FizzBuzz'
-	elsif number % 3 == 0
+	elsif fizz
 		'Fizz'
-	elsif number % 5 == 0
+	elsif buzz
 		'Buzz'
 	else
 		number
