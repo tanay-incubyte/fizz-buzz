@@ -5,6 +5,10 @@ RSpec.describe '#fizz_buzz' do
     expect(fizz_buzz(1)).to eq(1)
     expect(fizz_buzz(2)).to eq(2)
     expect(fizz_buzz(4)).to eq(4)
+    expect(fizz_buzz(7)).to eq(7)
+    expect(fizz_buzz(8)).to eq(8)
+    expect(fizz_buzz(11)).to eq(11)
+
   end
 
 	it 'returns "Fizz" for multiples of 3' do
@@ -20,6 +24,7 @@ RSpec.describe '#fizz_buzz' do
 
 	it 'returns "FizzBuzz" for multiples of 3 and 5' do
 		expect(fizz_buzz(15)).to eq('FizzBuzz')
+		expect(fizz_buzz(30)).to eq('FizzBuzz')
 	end
 
 end
