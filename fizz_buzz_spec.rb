@@ -1,30 +1,36 @@
 require_relative 'fizz_buzz'
 
 RSpec.describe '#fizz_buzz' do
-  it 'returns the correct integer' do
-    expect(fizz_buzz(1)).to eq(1)
-    expect(fizz_buzz(2)).to eq(2)
-    expect(fizz_buzz(4)).to eq(4)
-    expect(fizz_buzz(7)).to eq(7)
-    expect(fizz_buzz(8)).to eq(8)
-    expect(fizz_buzz(11)).to eq(11)
-
+  context 'when the number is not divisible by 3 or 5' do
+    it 'returns the number itself' do
+      [1, 2, 4, 7, 8, 11].each do |num|
+        expect(fizz_buzz(num)).to eq(num)
+      end
+    end
   end
 
-	it 'returns "Fizz" for multiples of 3' do
-		expect(fizz_buzz(3)).to eq('Fizz')
-		expect(fizz_buzz(6)).to eq('Fizz')
-		expect(fizz_buzz(9)).to eq('Fizz')
-	end
+  context 'when the number is divisible by 3' do
+    it 'returns "Fizz"' do
+      [3, 6, 9, 12].each do |num|
+        expect(fizz_buzz(num)).to eq('Fizz')
+      end
+    end
+  end
 
-	it 'returns "Buzz" for multiples of 5' do
-		expect(fizz_buzz(5)).to eq('Buzz')
-		expect(fizz_buzz(10)).to eq('Buzz')
-	end
+  context 'when the number is divisible by 5' do
+    it 'returns "Buzz"' do
+      [5, 10, 20, 25].each do |num|
+        expect(fizz_buzz(num)).to eq('Buzz')
+      end
+    end
+  end
 
-	it 'returns "FizzBuzz" for multiples of 3 and 5' do
-		expect(fizz_buzz(15)).to eq('FizzBuzz')
-		expect(fizz_buzz(30)).to eq('FizzBuzz')
-	end
-
+  context 'when the number is divisible by both 3 and 5' do
+    it 'returns "FizzBuzz"' do
+      [15, 30, 45, 60].each do |num|
+        expect(fizz_buzz(num)).to eq('FizzBuzz')
+      end
+    end
+  end
 end
+
