@@ -18,4 +18,8 @@ RSpec.describe '#fizz_buzz' do
 		expect(fizz_buzz(10)).to eq('Buzz')
 	end
 
+	it 'returns "FizzBuzz" for multiples of 3 and 5' do
+		expect(fizz_buzz(15)).to eq('FizzBuzz')
+	end
+
 end
