@@ -9,3 +9,7 @@ def fizz_buzz(number)
 		number
 	end
 end
+
+1.upto(15) do
+	|i| puts fizz_buzz(i)
+end
